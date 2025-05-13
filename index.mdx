@@ -1,71 +1,73 @@
 ---
-title: Introduction
-description: "Welcome to iClosed documentation"
+title: Introduction to iClosed
+description: "Experience the power of iClosed firsthand with founder leading the way!"
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.png"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.png"
-  alt="Hero Dark"
-/>
+export const FeatureCard = ({ icon, title, points }) => (
+  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
+    <div className="flex items-center">
+      <span className="text-2xl mr-3">{icon}</span>
+      <p className="text-xl font-semibold text-gray-900 dark:text-white">{title}</p>
+    </div>
+    <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+      {points.map((point, index) => (
+        <li key={index} className="flex items-start">
+          {point}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
-## Setting up
 
-The first step to world-class documentation is setting up your editing environments.
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+<div className="wistia_responsive_padding" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+  <div className="wistia_responsive_wrapper" style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}>
+    <iframe 
+      src="https://fast.wistia.net/embed/iframe/tnaoktvr6a?videoFoam=true" 
+      title="Wistia Video"
+      allow="autoplay; fullscreen" 
+      allowTransparency="true" 
+      frameBorder="0" 
+      scrolling="no" 
+      className="wistia_embed" 
+      name="wistia_embed" 
+      width="100%" 
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
 
-## Make it yours
+## iclosed
 
-Update your docs to your brand and add valuable content for the best user conversion.
+iClosed is a groundbreaking scheduling tool designed to:
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/content/components/accordions"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+<div className="grid grid-cols-1 gap-6 mt-8">
+    <FeatureCard
+      icon="📈"
+      title="Increase Lead Generation"
+      points={[
+        "Instantly boost lead generation by 20-30% without additional advertising costs",
+        "Capture every prospect's information, even if they don't complete the scheduling process"
+      ]}
+    />
+
+    <FeatureCard
+      icon="✅"
+      title="Improve Lead Quality"
+      points={[
+        "Automatically disqualify non-buyer prospects based on criteria such as company size and revenue",
+        "Avoid wasting time on prospects who are unlikely to convert"
+      ]}
+    />
+
+    <FeatureCard
+      icon="💡"
+      title="Enhance Market Intelligence"
+      points={[
+        "Enhances both sales and marketing teams' insights by tracking detailed prospect information and responses",
+        "Helps marketing teams generate leads that are more likely to convert"
+      ]}
+    />
+  </div>
